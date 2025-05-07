@@ -20,12 +20,13 @@
             scroll-behavior: smooth;
         }
 
+        /* Basic Styling */
         /* Fixed navbar */
         #navbar {
             position: fixed;
             top: 0;
             width: 100%;
-            background: #4c5c96;
+            background: #4c5c96; /* Keeping the original color */
             z-index: 1000;
             padding: 1em 0;
         }
@@ -56,6 +57,56 @@
         section {
             scroll-margin-top: 80px;
         }
+
+        /* Hamburger Menu Styles */
+        .navbar-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar-toggler {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5em;
+            cursor: pointer;
+        }
+
+        .navbar-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        /* Media Query for Mobile */
+        @media (max-width: 768px) {
+            #navbar ul {
+                display: none;
+                flex-direction: column;
+                background-color: #4c5c96;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                width: 100%;
+                padding: 10px 0;
+                align-items: center;
+            }
+
+            #navbar ul li {
+                margin: 10px 0;
+                text-align: center;
+            }
+
+            .navbar-toggler {
+                display: block;
+            }
+
+            #navbar ul.active {
+                display: flex;
+            }
+        }
+
     </style>
     <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 </head>
@@ -64,18 +115,30 @@
 
     <!-- Navbar -->
     <nav id="navbar">
-        <ul>
-            <li><a href="#about">About Me</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#education">Education</a></li>
-            <li><a href="#certifications">Certifications</a></li>
-            <li><a href="#achievements">Achievements</a></li>
-            <li><a href="#resumes">Resumes</a></li>
-            <li><a href="#contact">Contact</a></li>    
-        </ul>
+        <div class="navbar-container">
+            <!-- Brand or Logo -->
+            <a href="#" class="navbar-brand">My Portfolio</a>
+
+            <!-- Hamburger Icon -->
+            <button class="navbar-toggler" id="navbar-toggler" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon">&#9776;</span> <!-- Hamburger icon symbol -->
+            </button>
+
+            <!-- Navbar Links -->
+            <ul class="navbar-links" id="navbar-links">
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#certifications">Certifications</a></li>
+                <li><a href="#achievements">Achievements</a></li>
+                <li><a href="#resumes">Resumes</a></li>
+                <li><a href="#contact">Contact</a></li>    
+            </ul>
+        </div>
     </nav>
+
 
     <!-- Page Wrapper -->
     <div id="page-wrapper" style="padding-top: 100px;"> <!-- Push down content to avoid nav overlap -->
@@ -332,6 +395,16 @@
     <script src="assets/js/breakpoints.min.js"></script>
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
+    <!-- JavaScript for the hamburger toggle -->
+    <script>
+        // Toggle the mobile navbar on/off
+        const navbarToggler = document.getElementById('navbar-toggler');
+        const navbarLinks = document.getElementById('navbar-links');
+
+        navbarToggler.addEventListener('click', function() {
+            navbarLinks.classList.toggle('active');
+        });
+    </script>
 
 </body>
 </html>
