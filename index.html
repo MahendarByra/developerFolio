@@ -62,22 +62,31 @@
             scroll-margin-top: 80px;
         }
 
-        /* Hamburger Menu Styles */
+        /* Navbar Container */
         .navbar-container {
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
 
+        /* Toggler button (Initial) */
         .navbar-toggler {
             display: none;
-            background: none;
+            background: #3a4c7f; /* Darker blue for the toggler */
             border: none;
-            color: #2c3e50;
-            font-size: 1.0em;
+            padding: 10px;
             cursor: pointer;
         }
 
+        .navbar-toggler span {
+            background-color: white;
+            height: 3px;
+            width: 30px;
+            margin: 5px 0;
+            transition: all 0.3s ease;
+        }
+
+        /* Navbar Links */
         .navbar-links {
             display: flex;
             gap: 20px;
@@ -109,8 +118,17 @@
             #navbar ul.active {
                 display: flex;
             }
-        }
 
+            /* Change background when toggler is active */
+            .navbar-toggler.active {
+                background: #2a3a5d; /* Even darker blue for the toggler when menu is open */
+            }
+
+            /* Keep the toggler icon white even when the menu is open */
+            .navbar-toggler span {
+                background-color: white;
+            }
+        }
     </style>
     <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 </head>
@@ -399,6 +417,7 @@
     <script src="assets/js/breakpoints.min.js"></script>
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
+
     <!-- JavaScript for the hamburger toggle -->
     <script>
         // Toggle the mobile navbar on/off
@@ -409,16 +428,17 @@
         // Toggle navbar when clicking the navbar toggler
         navbarToggler.addEventListener('click', function() {
             navbarLinks.classList.toggle('active');
+            navbarToggler.classList.toggle('active');
         });
     
         // Close the navbar when a link is clicked
         navbarItems.forEach(function(item) {
             item.addEventListener('click', function() {
                 navbarLinks.classList.remove('active'); // Close the navbar
+                navbarToggler.classList.remove('active'); // Remove active toggler color
             });
         });
     </script>
     
-
 </body>
 </html>
