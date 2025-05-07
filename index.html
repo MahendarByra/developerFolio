@@ -71,24 +71,28 @@
 
         /* Toggler button (Initial) */
         .navbar-toggler {
-            display: block;
-            background: #2c3e50; /* Darker shade */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 5px; /* spacing between lines */
+            background-color: #1c2331; /* darkest shade */
             border: none;
-            color: #fff;
-            font-size: 1.8em;
+            padding: 10px; /* ensures enough room for the lines */
             cursor: pointer;
-            padding: 0.5em;
-            width: 40px;
-            height: 40px;
+            border-radius: 4px;
+            height: 45px;   /* ensure enough vertical space */
+            width: 45px;    /* ensure enough horizontal space */
         }
 
         .navbar-toggler span {
             display: block;
-            width: 30px;
-            height: 4px;
-            background-color: #fff; /* White color for lines */
-            margin: 6px 0; /* Spacing between the lines */
+            width: 25px;
+            height: 3px;
+            background-color: white;
+            border-radius: 2px;
         }
+
 
         /* Navbar Links */
         .navbar-links {
