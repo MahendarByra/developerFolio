@@ -71,26 +71,26 @@
 
         /* Toggler button (Initial) */
         .navbar-toggler {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            gap: 5px; /* spacing between lines */
-            background-color: #1c2331; /* darkest shade */
-            border: none;
-            padding: 10px; /* ensures enough room for the lines */
-            cursor: pointer;
-            border-radius: 4px;
-            height: 45px;   /* ensure enough vertical space */
-            width: 45px;    /* ensure enough horizontal space */
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          gap: 6px; /* increased gap for better spacing */
+          background-color: #1c2331; /* darkest background */
+          border: none;
+          padding: 12px;
+          cursor: pointer;
+          border-radius: 4px;
+          height: 48px;
+          width: 48px;
         }
-
+        
         .navbar-toggler span {
-            display: block;
-            width: 25px;
-            height: 3px;
-            background-color: white;
-            border-radius: 2px;
+          display: block;
+          width: 26px;
+          height: 3px;
+          background-color: white;
+          border-radius: 2px;
         }
 
 
@@ -137,6 +137,13 @@
                 background-color: white;
             }
         }
+        /* Hide toggler on wider screens (desktop) */
+        @media (min-width: 768px) {
+            .navbar-toggler {
+                display: none;
+              }
+        }
+
     </style>
     <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 </head>
