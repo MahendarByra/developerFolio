@@ -74,10 +74,6 @@
             cursor: pointer;
         }
 
-        .navbar-toggler span {
-            color: #2c3e50; /* Ensuring the hamburger icon is in the darker color */
-        }
-
         .navbar-links {
             display: flex;
             gap: 20px;
@@ -404,11 +400,21 @@
         // Toggle the mobile navbar on/off
         const navbarToggler = document.getElementById('navbar-toggler');
         const navbarLinks = document.getElementById('navbar-links');
-
+        const navbarItems = document.querySelectorAll('#navbar-links a');  // Select all the links in the navbar
+    
+        // Toggle navbar when clicking the navbar toggler
         navbarToggler.addEventListener('click', function() {
             navbarLinks.classList.toggle('active');
         });
+    
+        // Close the navbar when a link is clicked
+        navbarItems.forEach(function(item) {
+            item.addEventListener('click', function() {
+                navbarLinks.classList.remove('active'); // Close the navbar
+            });
+        });
     </script>
+    
 
 </body>
 </html>
