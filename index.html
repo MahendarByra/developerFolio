@@ -1,0 +1,337 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Mahendar Byra's Portfolio</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/fontawesome-all.min.css" />
+    <style>
+        .phone-right::before {
+            transform: scaleX(-1); /* Flip horizontally */
+            display: inline-block;
+        }
+
+        .features {
+            display: flex;
+            flex-direction: column;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Fixed navbar */
+        #navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: #4c5c96;
+            z-index: 1000;
+            padding: 1em 0;
+        }
+
+        #navbar ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        #navbar ul li {
+            margin: 0 1em;
+        }
+
+        #navbar ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        #navbar ul li a:hover {
+            text-decoration: underline;
+        }
+
+        /* Offset for fixed nav */
+        section {
+            scroll-margin-top: 80px;
+        }
+    </style>
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+</head>
+
+<body class="is-preload">
+
+    <!-- Navbar -->
+    <nav id="navbar">
+        <ul>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#certifications">Certifications</a></li>
+            <li><a href="#achievements">Achievements</a></li>
+            <li><a href="#resumes">Resumes</a></li>
+            <li><a href="#contact">Contact</a></li>    
+        </ul>
+    </nav>
+
+    <!-- Page Wrapper -->
+    <div id="page-wrapper" style="padding-top: 100px;"> <!-- Push down content to avoid nav overlap -->
+
+        <!-- Hero/Intro -->
+        <header style="text-align: center; padding: 2em;">
+            <h1>Hi, I'm Mahendar Byra</h1>
+            <p>
+                I'm a passionate Software Developer and Data Science enthusiast.<br>
+                I love solving real-world problems using code and data.
+            </p>
+        </header>
+
+        <!-- Banner -->
+        <section id="banner">
+            <div class="inner">
+                <div class="logo"><span class="icon fa-gem"></span></div>
+                <h2>Welcome to My Portfolio</h2>
+                <p>Showcasing my work in Software Development and Data Science.</p>
+            </div>
+        </section>
+
+        <!-- Wrapper -->
+        <section id="wrapper">
+
+            <!-- About Me -->
+            <section id="about" class="wrapper">
+                <div class="inner">
+                    <h2 class="major">About Me</h2>
+                    <p>I'm Mahendar, an enthusiastic software developer and data science lover.</p>
+                    <p>I enjoy building solutions and learning new technologies to solve complex problems.</p>
+                </div>
+            </section>
+
+
+            <!-- Experience Section -->
+            <section id="experience" class="wrapper">
+                <div class="inner">
+                    <h2 class="major">Experience</h2>
+
+                    <div class="experience-item">
+                        <h3>Firmware Intern – Marvell Technologies</h3>
+                        <p><em>July 2024 – Present</em></p>
+                        <ul>
+                            <li>SoNiC: Complete understanding of SoNiC network OS and its underlying protocols.</li>
+                            <li>sonic-vs: Configured SoNiC OS on a virtual switch environment.</li>
+                            <li>sonic-vpp: Integrated SoNiC with Vector Packet Processing (VPP).</li>
+                            <li>SoNiC-DASH: Contributing to the development of the SoNiC-DASH open-source project.</li>
+                        </ul>
+                    </div>
+
+                    <div class="experience-item">
+                        <h3>Summer Intern – University of Hyderabad</h3>
+                        <p><em>June 2024 – July 2024</em></p>
+                        <ul>
+                            <li>Worked on machine translation using various language models, including pre-trained models.</li>
+                            <li>Performed data conversions for multiple language model types.</li>
+                            <li>Trained both Statistical and Neural Machine Learning models for translation tasks.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+
+
+            <!-- Projects -->
+            <section id="projects" class="wrapper">
+                <div class="inner">
+                    <h2 class="major">Projects</h2>
+
+                        <h3>ML, DL & Computer Vision</h3>
+                        <ul>
+                            <li><strong>Early Detection of NAFLD</strong>: Deep learning model for liver disease detection using ultrasound images.</li>
+                            <li><strong>Chest X-ray Classification</strong>: Classified X-ray images into COVID-19, Pneumonia, and Normal using CNNs.</li>
+                            <li><strong>Log Anomaly Detection</strong>: Federated deep learning pipeline using BERT for system log anomaly detection.</li>
+                            <li><strong>ML Exploration</strong>: Applied supervised and unsupervised ML techniques on various datasets.</li>
+                            <li><strong>ML Project Suite</strong>: Regression models for predicting student grades and employee salaries.</li>
+                        </ul>
+
+                        <h3>NLP Projects</h3>
+                        <ul>
+                            <li><strong>Text Analysis</strong>: Word-level and character-level linguistic analysis for English and Hindi.</li>
+                            <li><strong>Language Generation</strong>: Text generation models at both character and word levels.</li>
+                            <li><strong>Text Classification</strong>: Sentiment and sarcasm detection using transformer-based models.</li>
+                            <li><strong>Machine Translation</strong>: English-to-Telugu translation with MarianMT and custom models.</li>
+                        </ul>
+
+                        <h3>Data Analysis</h3>
+                        <ul>
+                            <li><strong>Netflix Duration Analysis</strong>: EDA on movie durations across genres using Pandas, Matplotlib, and Seaborn.</li>
+                            <li><strong>Oldest Businesses Worldwide</strong>: Identified and visualized the world’s oldest companies by continent.</li>
+                        </ul>
+
+                        <h3>Systems & Compiler</h3>
+                        <ul>
+                            <li><strong>Electricity Billing System</strong>: Java Swing-based GUI application for managing utility bills.</li>
+                            <li><strong>Group Chat Application</strong>: Terminal-based chat using sockets and multithreading in C.</li>
+                            <li><strong>SQL Compiler</strong>: MySQL subset compiler built with Lex and Yacc demonstrating all compiler phases.</li>
+                        </ul>
+
+                        <h3>Web Development</h3>
+                        <ul>
+                            <li><strong>Grocery Store</strong>: Full-stack application with user authentication and inventory management.</li>
+                            <li><strong>Event Management System</strong>: Web app to manage event scheduling, registration, and feedback.</li>
+                            <li><strong>Classroom Booking System</strong>: Interface for managing classroom reservations in academic institutions.</li>
+                        </ul>
+                </div>
+            </section>
+
+            
+            <!-- Skills Section -->
+            <section id="skills" class="wrapper style1">
+                <div class="inner">
+                    <h2 class="major">Skills</h2>
+                    <div class="features">
+
+                        <div class="feature">
+                            <h3>Programming Languages</h3>
+                            <p>Python, Java, C, C++, Prolog</p>
+                        </div>
+
+                        <div class="feature">
+                            <h3>Web Development</h3>
+                            <p>HTML, CSS, JavaScript, Ajax, JQuery, Java Servlets, PHP</p>
+                        </div>
+
+                        <div class="feature">
+                            <h3>Machine Learning & AI</h3>
+                            <p>Machine Learning, Deep Learning, Neural Networks, NLP, Computer Vision, Image Processing, Data Science, Data Analysis</p>
+                        </div>
+
+                        <div class="feature">
+                            <h3>Database Technologies</h3>
+                            <p>MySQL, Hadoop, DBMS</p>
+                        </div>
+
+                        <div class="feature">
+                            <h3>Tools & Platforms</h3>
+                            <p>Git, GitHub, Docker, Linux</p>
+                        </div>
+
+                        <div class="feature">
+                            <h3>Technical Coursework</h3>
+                            <p>Data Structures and Algorithms, OOPs, DBMS, Problem Solving, Agile, SDLC, Network Programming</p>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- Education Section -->
+            <section id="education" class="wrapper">
+                <div class="inner">
+                    <h2 class="major">Education</h2>
+
+                    <div class="education-item">
+                        <h3>Integrated M.Tech in Computer Science – Hyderabad Central University, Hyderabad</h3>
+                        <p><em>Dec 2020 – Jun 2025, Telangana</em></p>
+                        <p>CGPA: 9.12</p>
+                    </div>
+
+                    <div class="education-item">
+                        <h3>Senior Secondary (XII) – Sri Chaitanya Junior College, Hyderabad</h3>
+                        <p><em>June 2018 – March 2020, Telangana</em></p>
+                        <p>Percentage: 98.4%</p>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- Certifications and Trainings -->
+            <section id="certifications" class="wrapper">
+                <div class="inner">
+                    <h2 class="major">Certifications & Trainings</h2>
+
+                    <ul>
+                        <li>Computer Vision with OpenCV – Udemy</li>
+                        <li>Neural Networks and Deep Learning – Coursera</li>
+                        <li>NLP in TensorFlow – Coursera</li>
+                        <li>Python – DataCamp, Kaggle</li>
+                        <li>Introduction to Statistics in Python – DataCamp</li>
+                        <li>Machine Learning with Python – Cognitive Classes, DataCamp</li>
+                        <li>SQL – HackerRank</li>
+                        <li>Problem Solving – HackerRank</li>
+                    </ul>
+                </div>
+            </section>
+
+
+
+            <!-- Achievements -->
+            <section id="achievements" class="wrapper">
+                <div class="inner">
+                    <h2 class="major">Achievements</h2>
+
+                    <ul>
+                        <li>Awarded the MCT Scholarship for academic excellence after 10th grade.</li>
+                        <li>Secured AIR 3874 in GATE CS 2024.</li>
+                        <li>Secured AIR 19654 in JEE Mains 2020.</li>
+                        <li>Secured 2099th Rank in TS EAMCET 2020.</li>
+                    </ul>
+                </div>
+            </section>
+
+
+
+            <!-- Resumes -->
+            <section id="resumes" class="wrapper style2">
+                <div class="inner">
+                    <h2 class="major">My Resumes</h2>
+                    <ul class="actions">
+                        <li><a href="https://drive.google.com/file/d/1EknwQGJdbFbgrVVke7q74JHCj3_I0_Sr/view?usp=sharing" target="_blank" class="button primary">📄 Data Scientist Resume</a></li>
+                        <li><a href="https://drive.google.com/file/d/16W5WuYSiPr6pw5OfIaGL_I7_widv1Gxw/view?usp=sharing" target="_blank" class="button primary">📄 SDE Resume</a></li>
+                    </ul>
+                </div>
+            </section>
+
+
+             
+            
+            <!-- Contact -->
+            <section id="contact" class="wrapper">
+                <div class="inner">
+                    <h2 class="major">Get in Touch</h2>
+                    <p>Feel free to reach out if you'd like to work together or just want to chat about tech!</p>
+                    <ul class="icons">
+                        <li><a href="mailto:mahendarbyra@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+                        <li><a href="https://github.com/MahendarByra" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+                        <li><a href="https://www.linkedin.com/in/mahendar-byra-75a93a209/" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+                        <li><a href="tel:+919392435443" class="icon solid fa-phone phone-right"><span class="label">Phone</span></a></li>
+                    </ul>
+                </div>
+            </section>
+
+        </section>
+
+        <!-- Footer -->
+        <section id="footer">
+            <div class="inner">
+                <p>&copy; Mahendar. All rights reserved.</p>
+                <ul>
+                    <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+                </ul>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+
+</body>
+</html>
