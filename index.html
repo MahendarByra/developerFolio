@@ -69,28 +69,37 @@
             align-items: center;
         }
 
-        /* Toggler button (Initial) */
+
+        /* Hide toggler on desktop screens */
+        @media (min-width: 768px) {
+          .navbar-toggler {
+            display: none !important;
+          }
+        }
+        
+        /* Style toggler button */
         .navbar-toggler {
           display: flex;
           flex-direction: column;
           justify-content: center;
           align-items: center;
-          gap: 6px; /* increased gap for better spacing */
-          background-color: #1c2331; /* darkest background */
+          background-color: #1c2331; /* Darkest background */
           border: none;
-          padding: 12px;
+          padding: 10px;
           cursor: pointer;
-          border-radius: 4px;
-          height: 48px;
+          border-radius: 6px;
           width: 48px;
+          height: 48px;
         }
         
+        /* Style each line of the toggler */
         .navbar-toggler span {
           display: block;
           width: 26px;
           height: 3px;
           background-color: white;
           border-radius: 2px;
+          margin: 4px 0; /* This ensures spacing between the lines */
         }
 
 
@@ -137,13 +146,7 @@
                 background-color: white;
             }
         }
-        /* Hide toggler on wider screens (desktop) */
-        @media (min-width: 768px) {
-            .navbar-toggler {
-                display: none;
-              }
-        }
-
+    
     </style>
     <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 </head>
@@ -157,11 +160,12 @@
             <a href="#" class="navbar-brand">My Portfolio</a>
 
             <!-- Hamburger Icon -->
-            <button class="navbar-toggler" id="navbar-toggler" aria-label="Toggle navigation">
-                <span></span>
-                <span></span>
-                <span></span>
+            <button class="navbar-toggler" type="button">
+              <span></span>
+              <span></span>
+              <span></span>
             </button>
+
 
             <!-- Navbar Links -->
             <ul class="navbar-links" id="navbar-links">
