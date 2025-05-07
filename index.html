@@ -92,15 +92,15 @@
           height: 48px;
         }
         
-        /* Style each line of the toggler */
         .navbar-toggler span {
           display: block;
           width: 26px;
           height: 3px;
           background-color: white;
           border-radius: 2px;
-          margin: 4px 0; /* This ensures spacing between the lines */
+          margin: 5px 0; /* Was 4px before, increased to give more space */
         }
+
 
 
         /* Navbar Links */
@@ -160,11 +160,12 @@
             <a href="#" class="navbar-brand">My Portfolio</a>
 
             <!-- Hamburger Icon -->
-            <button class="navbar-toggler" type="button">
+            <button class="navbar-toggler" id="navbar-toggler" type="button" aria-label="Toggle navigation">
               <span></span>
               <span></span>
               <span></span>
             </button>
+
 
 
             <!-- Navbar Links -->
